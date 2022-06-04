@@ -12,3 +12,7 @@ These should be run _after_ running the setup script.
 1. Copy into ~/.ssh/id_rsa
 1. Run `eval "$(ssh-agent -s)`
 1. Run `ssh-add --apple-use-keychain ~/.ssh/id_rsa`
+
+### iterm
+
+1. Import `iterm2.json` as a profile via the iterm GUI
