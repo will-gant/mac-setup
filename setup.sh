@@ -6,6 +6,9 @@ script_dir="$( cd -- "$( dirname -- "${BASH_SOURCE[0]:-$0}"; )" &> /dev/null && 
 
 brew bundle --file="${script_dir}/Brewfile"
 
+# git
+cp "${script_dir}/gitconfig" "${HOME}/.gitconfig"
+
 # dock
 dock_item() {
     printf '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>%s</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>', "$1"

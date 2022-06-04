@@ -1,7 +1,7 @@
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
-brew "bitwarden-cli"
+brew "git"
 brew "jq"
 cask "1password"
 cask "authy"
