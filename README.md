@@ -15,4 +15,8 @@ These should be run _after_ running the setup script.
 
 ### iterm
 
-1. Import `iterm2.json` as a profile via the iterm GUI
+Import `iterm2.json` as a profile via the iterm GUI
+
+### VScode
+
+Switch on 'sync' and login with GitHub
