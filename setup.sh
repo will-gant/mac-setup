@@ -21,7 +21,8 @@ defaults write com.apple.dock persistent-apps -array \
     "$(dock_item /Applications/Slack.app)" \
     "$(dock_item /Applications/Brave\ Browser.app)" \
     "$(dock_item /Applications/Authy\ Desktop.app)" \
-    "$(dock_item /Applications/1Password\ 7.app)"
+    "$(dock_item /Applications/1Password\ 7.app)" \
+    "$(dock_item /Applications/LibreOffice.app)"
 
 defaults delete com.apple.dock recent-apps
 defaults delete com.apple.dock persistent-others
