@@ -42,7 +42,6 @@ sudo defaults write /Library/Preferences/com.apple.SoftwareUpdate ConfigDataInst
 sudo defaults write /Library/Preferences/com.apple.SoftwareUpdate CriticalUpdateInstall -bool true
 sudo defaults write /Library/Preferences/com.apple.SoftwareUpdate AutomaticCheckEnabled -bool true
 sudo defaults write /Library/Preferences/com.apple.SoftwareUpdate AutomaticDownload -bool true
-sudo defaults delete /Library/Preferences/com.apple.HIToolbox AppleEnabledInputSources
 sudo defaults write /Library/Preferences/com.apple.commerce AutoUpdateRestartRequired -bool true
 
 # enable firewall
