@@ -49,4 +49,7 @@ sudo defaults write /Library/Preferences/com.apple.alf globalstate -int 2
 
 # enable FileVault encryption (interactive)
 sudo fdesetup enable
+
+# show bluetooth in menu bar
+sudo defaults write ~/Library/Preferences/ByHost/com.apple.controlcenter.plist Bluetooth -int 18
 ```
