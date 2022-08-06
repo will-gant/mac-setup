@@ -14,7 +14,8 @@ bash "$setup_repo/*mac-setup*/setup.sh
 ## Manual steps:
 
 These should be run _after_ the setup script completes.
-### Git
+
+### SSH key
 
 1. Retrieve SSH private key from password manager
 1. Copy it into ~/.ssh/id_rsa
