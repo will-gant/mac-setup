@@ -8,7 +8,7 @@ zipball_url="$(curl -s https://api.github.com/repos/will-gant/mac-setup/releases
 zip_file="${setup_repo}/repo.zip"
 curl --location "$zipball_url" --output "${setup_repo}/repo.zip"
 unzip "$zip_file" -d "$setup_repo"
-bash "$setup_repo/*mac-setup*/setup.sh
+bash "$setup_repo/*mac-setup*/setup.sh"
 ```
 
 ## Manual steps:
