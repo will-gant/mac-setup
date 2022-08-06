@@ -35,10 +35,6 @@ Switch on 'sync' and login with GitHub
 NB. These take effect after a restart
 
 ```bash
-# keyboard
-sudo defaults write /Library/Preferences/com.apple.HIToolbox AppleCurrentKeyboardLayoutInputSourceID "com.apple.keylayout.British"
-sudo defaults write /Library/Preferences/com.apple.HIToolbox AppleDefaultAsciiInputSource -dict InputSourceKind "Keyboard Layout" "KeyboardLayout ID" -int 2 "KeyboardLayout Name" British
-sudo defaults delete /Library/Preferences/com.apple.HIToolbox AppleEnabledInputSources
 
 # updates
 sudo defaults write /Library/Preferences/com.apple.commerce AutoUpdate -bool true
