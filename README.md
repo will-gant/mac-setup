@@ -15,7 +15,7 @@
     zip_file="${setup_repo}/repo.zip"
     curl --location "$zipball_url" --output "${setup_repo}/repo.zip"
     unzip "$zip_file" -d "$setup_repo"
-    bash "$(ls "$setup_repo/*mac-setup*/setup.sh")"
+    bash ${setup_repo}/*mac-setup*/setup.sh
     ```
 1. Retrieve SSH private key from password manager and copy it into ~/.ssh/id_rsa
 1. Run `eval "$(ssh-agent -s)"`
