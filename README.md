@@ -10,12 +10,12 @@
 1. [Install brew](https://brew.sh/) (requires sudo)
 1. Run the following to download the latest release of this repo and then run the setup script:
     ```bash
-       setup_repo="$(mktemp -d)"
-       zipball_url="$(curl -s https://api.github.com/repos/will-gant/mac-setup/releases/latest | grep zipball_url | cut -d '"' -f 4)"
-       zip_file="${setup_repo}/repo.zip"
-       curl --location "$zipball_url" --output "${setup_repo}/repo.zip"
-       unzip "$zip_file" -d "$setup_repo"
-       bash "$setup_repo/*mac-setup*/setup.sh"
+    setup_repo="$(mktemp -d)"
+    zipball_url="$(curl -s https://api.github.com/repos/will-gant/mac-setup/releases/latest | grep zipball_url | cut -d '"' -f 4)"
+    zip_file="${setup_repo}/repo.zip"
+    curl --location "$zipball_url" --output "${setup_repo}/repo.zip"
+    unzip "$zip_file" -d "$setup_repo"
+    bash "$(ls "$setup_repo/*mac-setup*/setup.sh")"
     ```
 1. Retrieve SSH private key from password manager and copy it into ~/.ssh/id_rsa
 1. Run `eval "$(ssh-agent -s)"`
