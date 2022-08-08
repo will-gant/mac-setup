@@ -4,21 +4,8 @@ set -eo pipefail
 
 script_dir="$( cd -- "$( dirname -- "${BASH_SOURCE[0]:-$0}"; )" &> /dev/null && pwd 2> /dev/null; )";
 
-# commandline developer tools
-touch /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress;
-xcode_version="$(softwareupdate --list | grep -E --only-matching "Command Line Tools for Xcode-[0-9]+\.[0-9]+" | tail -n 1)"
-softwareupdate --install "$xcode_version" --verbose
-rm /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress
-
-# brew
-mkdir "${script_dir}/homebrew" && curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C "${script_dir}/homebrew"
-eval "$(homebrew/bin/brew shellenv | tee "${HOME}/.zshrc")"
-brew update --force --quiet
-chmod -R go-w "$(brew --prefix)/share/zsh"
-
-brew bundle --file="${script_dir}/Brewfile"
-mkdir -p "${HOME}/Library/LaunchAgents"
 brew autoupdate start 43200
+brew bundle --file="${script_dir}/Brewfile"
 
 # git
 cp "${script_dir}/gitconfig" "${HOME}/.gitconfig"
