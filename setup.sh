@@ -4,7 +4,6 @@ set -eo pipefail
 
 script_dir="$( cd -- "$( dirname -- "${BASH_SOURCE[0]:-$0}"; )" &> /dev/null && pwd 2> /dev/null; )";
 
-brew autoupdate start 43200
 brew bundle --file="${script_dir}/Brewfile"
 
 # git
