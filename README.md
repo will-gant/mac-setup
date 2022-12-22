@@ -15,12 +15,14 @@
     zip_file="${setup_repo}/repo.zip"
     curl --location "$zipball_url" --output "${setup_repo}/repo.zip"
     unzip "$zip_file" -d "$setup_repo"
+    mkdir -p "${HOME}/Library/LaunchAgents"
     bash ${setup_repo}/*mac-setup*/setup.sh
     ```
 1. Retrieve SSH private key from password manager and copy it into ~/.ssh/id_rsa
 1. Run `eval "$(ssh-agent -s)"`
 1. Run `ssh-add --apple-use-keychain ~/.ssh/id_rsa`
-1. Start iterm2 and import `iterm2.json` as a profile via the iterm GUI
+1. Sync settings for Brave
+1. Start iterm2 and import `iterm2.json` as a profile via the iterm GUI (check `Working Directory` is correct)
 1. Start Visual Studio Code and sync settings by logging in with GitHub Auth
 1. Run the following to update system settings: 
     ```bash
