@@ -26,6 +26,9 @@ defaults delete com.apple.dock recent-apps
 defaults delete com.apple.dock persistent-others
 killall Dock
 
+# Make it so you can quit Finder just like any other app
+defaults write com.apple.finder QuitMenuItem -bool YES && killall Finder
+
 # SSH key
 ssh_dir="${HOME}/.ssh"
 mkdir -p "${ssh_dir}"
